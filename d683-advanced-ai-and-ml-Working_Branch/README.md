@@ -1,40 +1,43 @@
-Customer Churn Prediction Project
+# Customer Churn Prediction with Explainable AI
 
-1. Requirements
+This project predicts customer churn using an optimized machine learning pipeline (XGBoost) and explains key features behind predictions using SHAP values. It combines model training, evaluation, and interpretability into one cohesive project.
 
-Software:
+---
 
--Python 3.11
--Libraries: pandas, scikit-learn
-(Task 1 listed more libraries, but only ended up using these two)
+## Key Features
 
-Hardware:
+- Data preprocessing and feature engineering
+-  XGBoost model training and hyperparameter tuning with GridSearchCV
+-  Evaluation using accuracy, precision, recall, and F1 score
+-  5-Fold cross-validation for robust performance
+-  SHAP values for explainable AI and insight generation
 
--Dell Latitude 7400 laptop 
--Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz 
--16 GB RAM 
+---
 
-Development Environment:
--PyCharm Community Edition
--Windows 11 Pro (64-bit)
+## Tech Stack
 
+- Python 3.11
+- Libraries: `pandas`, `scikit-learn`, `xgboost`, `shap`, `matplotlib`
+- IDE: PyCharm
+- OS: Windows 11 Pro
+- CPU: Intel i7 (Dell Latitude 7400), 16 GB RAM
 
-2. Instructions to Run the Application
+---
 
-A. Clone the GitLab repository to your local machine.
-B. Open the project in PyCharm.
-C. Install required libraries:
-D. Run `preprocess.py` to preprocess the raw dataset and create `preprocessed_data.csv`.
-E. Run `train_model.py` to:
-- Build the model
-- Train the model
-- Evaluate model accuracy, precision, recall, and F1 score
-- Apply 5-fold cross-validation
-- Tune hyperparameters using GridSearchCV
+## 📁 Files
 
-(All outputs will be printed to the terminal after running `train_model.py`.)
+| File              | Description                                              |
+|-------------------|----------------------------------------------------------|
+| `preprocess.py`   | Cleans and prepares raw dataset for modeling             |
+| `train_model.py`  | Trains model, evaluates performance, applies CV + tuning |
+| `algorithm.py`    | Additional model logic (from earlier XGBoost prototype)  |
+| `sample_customer_data.csv` | Example dataset for testing                    |
 
+---
 
-Note
+## ▶️ How to Run
 
-Model building (B2) and training (B3) steps were performed together in a single script and commit for simplicity. Both are included and properly documented in the `train_model.py` file.
+```bash
+pip install -r requirements.txt
+python preprocess.py
+python train_model.py
